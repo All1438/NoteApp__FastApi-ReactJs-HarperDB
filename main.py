@@ -1,17 +1,15 @@
 from fastapi import FastAPI
+from database import db
 
-app = FastAPI() # FastAPI() = un instance de l'application fastapi
+app = FastAPI() 
 
-fakeDataBase = {
-    1:{"Let's go man"},
-    2:{"don't give up"},
-    3:{"In the end you are the best"},
-}
 
-@app.get("/") # est un décorateur qui signifie que si la requète GET est effectuer sur une route racine ("/"), la fonction sera executé
-def getItems():
-    return fakeDataBase
+@app.get("/") 
+def getRoutes():
+    return 
 
-@app.get("/{id}")
-def getItem(id:int):
-    return fakeDataBase
+@app.get("/")
+def getNotes():
+    return 
+
+
