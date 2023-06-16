@@ -1,25 +1,22 @@
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route
-} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css';
 import React from 'react'
-import './app.css'
-import Layout from './components/Layout.jsx'
-import Notes from './pages/Notes.jsx'
-import Note from './pages/Note.jsx'
+import Layout from './components/Layout'
+import Notes from './pages/Notes'
+import Note from './pages/Note'
 
-const App = () => {
+function App() {
   return (
-    <Router>
+      <Router>
         <Layout>
-            <Routes>
-                <Route path="/" exact element={<Notes />} />
-                <Route path="/note/id" element={<Note />} />
-            </Routes>
+          <Routes>
+            {" "}
+            <Route path='/' exact element={<Notes />} />
+            <Route path='/:id' element={<Note />} />
+          </Routes>
         </Layout>
-    </Router>
-  )
+      </Router>
+    );
 }
 
-export default App
+export default App;
