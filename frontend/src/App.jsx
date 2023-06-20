@@ -5,6 +5,7 @@ import Layout from './components/Layout'
 import Notes from './pages/Notes'
 import Note from './pages/Note'
 
+
 function App() {
   return (
       <Router>
